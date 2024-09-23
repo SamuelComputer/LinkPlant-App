@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body style="background-color: #f0f4f8; margin: 0; padding: 0; font-family: Arial, sans-serif;">
+    <div style="text-align: center; width: 75%; margin: 50px auto;">
+        <h1 style="font-size: 32px; font-weight: 600; text-decoration: underline; color: #333333; margin-bottom: 50px;">
+            {{ profile.name }}
+        </h1>
+        {% for link in links %}
+            <a href="{{ link.url }}" target="_blank" style="display: block; width: 100%; max-width: 400px; margin: 0 auto 20px auto; text-decoration: none;">
+                <button style="width: 100%; background-color: #1d72b8; color: white; font-weight: bold; padding: 12px 20px; border: none; border-radius: 5px; cursor: pointer; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: background-color 0.3s ease;">
+                    {{ link.text }} 
+                </button>
+            </a>
+        {% endfor %}
+        <a href="{% url 'link-list' %}" style="display: block; max-width: 200px; margin: 50px auto 0 auto; text-align: center; color: #1d72b8; text-decoration: underline; font-weight: bold;">
+            Back to Links List
+        </a>
+    </div>
+    <p style="background-color: #333333; color: white; padding: 12px; text-align: center; margin-top: 50px;">
+        Made By Samuel Sunday
+    </p>
+</body>
+</html>

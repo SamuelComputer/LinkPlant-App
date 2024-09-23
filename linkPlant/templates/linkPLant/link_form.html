@@ -1,0 +1,17 @@
+
+
+{% extends 'linkPlant/base.html' %}
+
+{% block content %}
+    <div style="text-align: center; max-width: 500px; margin: 50px auto; padding: 20px; background-color: #ffffff; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+        <h1 style="color: #1d72b8; font-size: 28px; font-weight: bold;">Link Form</h1>
+        <hr style="margin: 20px 0; border: none; border-top: 1px solid #ddd;">
+        <form action="" method="POST" style="text-align: left;">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <div style="text-align: center; margin-top: 20px;">
+                <input type="submit" value="Save Link" style="background-color: #1d72b8; color: white; padding: 10px 30px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px;">
+            </div>
+        </form>
+    </div>
+{% endblock %}
